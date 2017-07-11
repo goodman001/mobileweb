@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>赚不停</title>
+    
+</head>
+<body>
+	<div class="loading"><img src="images/ajax-loader.gif"/></div>
+	<div data-role="page" class="touzi" id="touzi">
+		<!--jqmb需要把所以东西放在page div内-->
+		 <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+   		 <link rel="stylesheet" href="css/style.css"/>
+   		 
+   		<!--jqmb需要把所以东西放在page div内--> 
+		<header data-role="header" data-position="fixed">
+			<a href="#" data-rel="back" class="ui-btn ui-icon-carat-l ui-btn-icon-left ui-nodisc-icon" data-transition="slide" data-direction="revserse">返回</a> 
+			<h3>投资</h3>
+		</header>
+		<div class="ui-content" data-role="content">
+			<section>
+				<h3>本息保障</h3>
+				<ul>
+					<li>
+						<small>年华收益</small>
+						<span>6%</span>
+					</li> 
+					<li>
+						<small>项目期限</small>
+						<span>30天</span>
+					</li>
+					<li>
+						<small>汇款方式</small>
+						<span>到期还本利息</span>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h3>可用余额 <a href="#">立即充值</a> </h3>
+				<p>投资金额<input type="text" data-role="none" placeholder="100起"></p>
+			</section>
+			<div class="tou-sub"><input type="submit" value="提交" data-role="none"/>
+						<a href="#" class="xie">查看投资协议</a></div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+   		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+   		<script type="text/javascript">
+   			$(window).load(function(){
+					$(".loading").fadeOut();
+					//var id = 1;
+					//location.href="touzi.html?id=1";
+				})
+   		</script>
+	</div>
+	
+</body>
+</html>

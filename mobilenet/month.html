@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>赚不停</title>
+</head>
+<body>
+	<div class="loading"><img src="images/ajax-loader.gif"/></div>
+	<div data-role="page" class="month" id="month">
+		<!--jqmb需要把所以东西放在page div内-->
+		 <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css"/>
+   		 <link rel="stylesheet" href="css/style.css"/>
+   		 
+   		<!--jqmb需要把所以东西放在page div内--> 
+		<header data-role="header" data-position="fixed">
+			<a href="#" data-rel="back" class="ui-btn ui-icon-carat-l ui-btn-icon-left ui-nodisc-icon" data-transition="slide" data-direction="reverse">返回</a> 
+			<h3>月月盈</h3>
+		</header>
+		<div class="ui-content" data-role="content">
+			<section class="month-top">
+				<h3>月月盈</h3>
+				<ul>
+					<li>
+						<p>年化收益&nbsp;6%</p>
+						<p>到期时间&nbsp;买入日起30天后</p>
+					</li>
+					<li>
+						<p>项目期限&nbsp;30天</p>
+						<p>可投金额&nbsp;100元-5万元</p>
+					</li>
+					<li>
+						<span><img src="images/icon04.png"/>当日计息</span> 
+						<span><img src="images/icon05.png"/>到期还本付息</span> 
+					</li>
+				</ul>
+			</section>
+			<article class="month-text">
+				<h3>本息保障</h3>
+				<p>这是本息保障，虽然我也不知道这是什么，反正这里是文字就是了，嗯</p>
+			</article>
+			<article class="month-text">
+				<h3>介绍</h3>
+				<p>这是本息保障，虽然我也不知道这是什么，反正这里是文字就是了，嗯</p>
+			</article>
+			<article class="month-text">
+				<h3>投资记录</h3>
+				<h4>您还未投资该项目</h4>
+			</article>
+		</div>
+		<footer data-role="footer" data-position="fixed">
+			<a href="touzi.html" data-transition="slide">投资</a>
+		</footer>
+		<script src="js/jquery.min.js"></script>
+   		<script src="js/jquery.mobile-1.4.5.min.js"></script>
+   		<script type="text/javascript">
+   			$(window).load(function(){
+					$(".loading").fadeOut()
+				})
+   		</script>
+	</div>
+	
+</body>
+</html>
