@@ -1,6 +1,6 @@
 /* Update this file with your styling rules. */
 /*清楚*/
-body{background-color: #ebebeb!important;-webkit-backface-visibility: hidden;margin:0px}
+body{background-color: #868584!important;-webkit-backface-visibility: hidden;margin:0px}
 .ui-page-theme-a{background-color: #f2f2f2!important;}
 *{text-shadow: none!important;}
 ul,li{margin: 0;padding: 0;list-style: none;}
@@ -13,7 +13,7 @@ input,select{-webkit-appearance: none;}
 	
 }
 /*loding*/  
-.loading{position: fixed;top:0;left: 0;width: 100%;height: 100%;background-color: #fff;z-index: 100000000;text-align: center;} 
+.loading{left: 0;width: 100%;height: 100%;background-color: #fff;z-index: 100000000;text-align: center;} 
 .loading img{ position: fixed;top: 45%;left: 45%;}
 /*顶部*/ 
 .ui-header{ width:100%;background-color: black;border: none;text-shadow: none;color: #fff;margin:0px;position: fixed;top:0;} 
@@ -24,3 +24,6 @@ input,select{-webkit-appearance: none;}
 .ui-footer a:first-child{ border-right: 1px dotted #fff;}
 .ui-footer ul{display: table;width: 100%;}
 .ui-footer ul li{ display: table-cell;width: 50%;text-align: center;}
+/*ui-div*/
+.ui-content{padding: 0;background-color:#868584}
+

@@ -7,7 +7,7 @@
 "use strict";
 
 // Get your own API key from https://uwaterloo.ca/api/register
-var apiKey = '';
+var apiKey = '5884f08401ed5110fe86869d137d628a';
 
 (function(exports) {
 
@@ -20,13 +20,15 @@ var apiKey = '';
         // You can add attributes / functions here to store the data
 
 		// Call this function to retrieve data from a UW API endpoint
-        loadData(endpointUrl) {
+        loadData(div,endpointUrl) {
+			//console.log(this.that);
+			var that = this.that;
             $.getJSON(endpointUrl + "?key=" + apiKey,
 				function (data) {
 					// Do something with the data; probably store it
 					// in the Model to be later read by the View.
-					
-		            that.notify(); // Notify View(s)
+					//console.log(this);
+		            that.notify(div,data); // Notify View(s)
 				}
 			);
         }
@@ -35,6 +37,7 @@ var apiKey = '';
 		
 		// Add an observer to the list
 		addObserver(observer) {
+			//console.log(this);
             if (_.isUndefined(this._observers)) {
                 this._observers = [];
             }
@@ -43,12 +46,15 @@ var apiKey = '';
         }
 		
 		// Notify all the observers on the list
-		notify(args) {
+		notify(div,args) {
+			//console.log(this);
+			var obj = this;
             if (_.isUndefined(this._observers)) {
                 this._observers = [];
             }
             _.forEach(this._observers, function(obs) {
-                obs(this, args);
+				//console.log(this);
+                obs($(div), args);
             });
         }
     }
@@ -59,14 +65,33 @@ var apiKey = '';
      * div:  the HTML div where the content goes
      */
     class AppView {
-		constructor(model, div) {
+		constructor(model, div, url) {
 			this.that = this;
 			this.model = model;
 			this.div = div;
+			
 			model.addObserver(this.updateView); // Add this View as an Observer
+			model.loadData(div,url);
+			
 		}
-		
         updateView(obs, args) {
+			//console.log(obs);
+			if(args == null)
+			{
+				console.log("null");
+				
+			}else
+			{
+				console.log(args.data);
+				var data = args.data;
+				var loadimgdiv = $(".loading");
+				//console.log(loadimgdiv);
+				loadimgdiv.hide();
+				$(".ui-content").html("");
+				
+			}
+			//console.log(args);
+			//obs.loadData("https://api.uwaterloo.ca/v2/courses.json");
             // Add code here to update the View
 			
         };        
@@ -76,9 +101,12 @@ var apiKey = '';
 		Function that will be called to start the app.
 		Complete it with any additional initialization.
 	*/
-    exports.startApp = function() {
-        var model = new AppModel();
-        var view = new AppView(model, "div#viewContent");
+    exports.startApp = function(path) {
+		console.log(path);
+		if(path == 'index'){
+			var model = new AppModel();
+			var view = new AppView(model, "div#viewContents","https://api.uwaterloo.ca/v2/courses.json");
+		}
     }
 
 })(window);
