@@ -82,12 +82,19 @@ var apiKey = '5884f08401ed5110fe86869d137d628a';
 				
 			}else
 			{
-				console.log(args.data);
+				//console.log(args.data);
 				var data = args.data;
 				var loadimgdiv = $(".loading");
 				//console.log(loadimgdiv);
 				loadimgdiv.hide();
-				$(".ui-content").html("");
+				$(".ui-tbody").html("");
+				for(var i=0;i< data.length;i++){
+					var trc = $('<td class="firstCol">'+data[i].subject +" " + data[i].catalog_number +'</td>'+ '<td class="lastCol">'+data[i].title+'</td>');
+					//var tr = $("<td></td>")
+					//var li = $("<td>abc</td>");
+					$(".ui-tbody").append($("<tr></tr>").append(trc));
+				}
+				
 				
 			}
 			//console.log(args);
@@ -106,7 +113,9 @@ var apiKey = '5884f08401ed5110fe86869d137d628a';
 		if(path == 'index'){
 			var model = new AppModel();
 			var view = new AppView(model, "div#viewContents","https://api.uwaterloo.ca/v2/courses.json");
+			
 		}
+		//$("#viewContent").click(function(){alert("cc")});
     }
 
 })(window);

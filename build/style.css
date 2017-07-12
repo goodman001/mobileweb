@@ -1,25 +1,23 @@
 /* Update this file with your styling rules. */
 /*清楚*/
-body{background-color: #868584!important;-webkit-backface-visibility: hidden;margin:0px}
+body{background-color: 	#5f5f5f!important;-webkit-backface-visibility: hidden;margin:0px;color:white;}
 .ui-page-theme-a{background-color: #f2f2f2!important;}
 *{text-shadow: none!important;}
 ul,li{margin: 0;padding: 0;list-style: none;}
 a:focus,a:hover,a:active,a:visited{ background:none!important;box-shadow: none!important;text-shadow: none!important;}
-input,select{-webkit-appearance: none;}
+
 /*自定义图标*/
  
-/*index*/
+/*flow*/
 .content{
-	
+	margin-top:60px;
 }
-/*loding*/  
-.loading{left: 0;width: 100%;height: 100%;background-color: #fff;z-index: 100000000;text-align: center;} 
-.loading img{ position: fixed;top: 45%;left: 45%;}
+
 /*顶部*/ 
-.ui-header{ width:100%;background-color: black;border: none;text-shadow: none;color: #fff;margin:0px;position: fixed;top:0;} 
-.ui-header h3{ color: #fff;font-weight: normal;font-size: 1.25em;margin:0px;padding:2%}
-/*底部*/
-.ui-footer{ background-color:#B8B6B4;width: 100%; position: fixed;bottom: 0;}
+.ui-header{ width:100%;background-color:#222222;border: none;text-shadow: none;color: #fff;margin:0px;position: fixed;top:0;height:3em} 
+.ui-header h3{ color: #fff;font-weight: normal;font-size: 1.5em;margin:0px;padding-top:5%;padding-left:3%;}
+/*底部  #dfdfdf*/
+.ui-footer{ background-color:#929292;width: 100%; position: fixed;bottom: 0;}
 .ui-footer a{font-size: 1.25em; color: #fff;padding:0.7em 0;display: block;width: 100%;text-shadow: none;margin: 0;border-radius: 0;text-decoration: none;} 
 .ui-footer a:first-child{ border-right: 1px dotted #fff;}
 .ui-footer ul{display: table;width: 100%;}
@@ -27,3 +25,83 @@ input,select{-webkit-appearance: none;}
 /*ui-div*/
 .ui-content{padding: 0;background-color:#868584}
 
+
+/*loading*/  
+.loading{left: 0;width: 100%;height: 100%;background-color: #fff;z-index: 100000000;text-align: center;} 
+.loading img{ position: fixed;top: 45%;left: 45%;}
+
+/*index*/
+.ui-table{  
+	width:100%;
+	border-collapse: collapse;  
+	border: 0px solid #999;  
+	
+}  
+.ui-table tr {  
+	height:2.5em;
+	width:100%;
+}    
+.ui-table thead th {  
+	border-top: 0px solid white;  
+	border-right: 1px solid white;  
+	border-bottom: 0px solid white;  
+	border-left: 0;  
+	background-color:	#878787;
+	font-weight:normal;
+}  
+.ui-table thead th.firstCol {  
+	width:35%;
+}
+.ui-table thead th.lastCol {  
+	width:65%;
+}
+.ui-table thead th.lastCol {  
+	border-right: 0px solid white;  
+} 
+.ui-tbody td {  
+	border-top: 1px solid white;  
+	border-right: 1px solid white;  
+	border-bottom: 1px solid white;  
+	border-left: 0; 
+	padding-left:20px;
+	background-color:#5f5f5f;
+	font-weight:normal;
+}  
+
+.ui-tbody tr.lastrow td {  
+	border-bottom: 0;  
+}  
+
+.ui-tbody tr td.lastCol {  
+	border-right: 0px solid white;  
+}
+.ui-tbody tr td.firstCol {    
+}
+
+
+
+.ui-filter{width:100%;height:30px;text-align:center;    margin-bottom: 15px;}
+.ui-div-inline{
+	float:left;
+	display:inline;
+	width:30%;
+	margin-left:2%;
+}
+.ui-div-inline select {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 2px 2px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
